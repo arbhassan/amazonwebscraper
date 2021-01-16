@@ -1,4 +1,4 @@
-const puppeteer = require("puppetter");
+const puppeteer = require("puppeteer");
 
 async function scrapeProduct(url) {
   const browser = await puppeteer.launch();
@@ -17,7 +17,7 @@ async function scrapeProduct(url) {
     '//*[@id="buyNewSection"]/a/h5/div/div[2]/div/span[2]'
   );
   const txt2 = await el3.getProperty("textContent");
-  const price = await txt.jsonValue();
+  const price = await txt2.jsonValue();
 
   console.log({ imgURL, title, price });
 
